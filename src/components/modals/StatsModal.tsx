@@ -5,12 +5,7 @@ import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
-import {
-  STATISTICS_TITLE,
-  GUESS_DISTRIBUTION_TEXT,
-  NEW_WORD_TEXT,
-  SHARE_TEXT,
-} from '../../constants/strings'
+import { NEW_WORD_TEXT, SHARE_TEXT } from '../../constants/strings'
 
 type Props = {
   isOpen: boolean
