@@ -31,6 +31,7 @@ export const ResultModal = ({
         We're enrolled together in Broadway Dance Center's March{' '}
         <a
           className="underline"
+          tabIndex={2}
           href="https://www.broadwaydancecenter.com/workshop/absolute-beginner-workshops"
         >
           Intro to Hip Hop class

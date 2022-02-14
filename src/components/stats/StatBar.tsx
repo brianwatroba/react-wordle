@@ -24,7 +24,7 @@ export const StatBar = ({ gameStats }: Props) => {
     <div className="flex justify-center my-2">
       <StatItem label="Months" value="6" />
       <StatItem label="Happiness" value={`100%`} />
-      <StatItem label="Misi meals" value="2" />
+      <StatItem label="Mantas" value="2" />
       <StatItem label="Bad cookie batch" value="1" />
     </div>
   )
