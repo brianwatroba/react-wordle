@@ -16,7 +16,6 @@ import {
   GAME_SUBTITLE,
   WIN_MESSAGES,
   GAME_COPIED_MESSAGE,
-  ABOUT_GAME_MESSAGE,
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
@@ -240,10 +239,12 @@ function App() {
 
   return (
     <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-8 mt-16">
+      <div className="flex w-80 mx-auto items-center mb-6 mt-0">
         <div className="flex-column ml-2.5 grow">
           <h1 className="text-xl font-bold dark:text-white">{GAME_TITLE}</h1>
-          <h4 className="font-light dark:text-white">{GAME_SUBTITLE}</h4>
+          <h4 className="font-light  text-gray-500 dark:text-gray-300">
+            {GAME_SUBTITLE}
+          </h4>
         </div>
 
         <InformationCircleIcon

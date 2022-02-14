@@ -33,26 +33,15 @@ export const StatsModal = ({
   handleShare,
   isHardMode,
 }: Props) => {
-  if (gameStats.totalGames <= 0) {
-    return (
-      <BaseModal
-        title={STATISTICS_TITLE}
-        isOpen={isOpen}
-        handleClose={handleClose}
-      >
-        <StatBar gameStats={gameStats} />
-      </BaseModal>
-    )
-  }
   return (
     <BaseModal
-      title={'STATISTICS_TITLE'}
+      title={'RELATIONSHIP STATS'}
       isOpen={isOpen}
       handleClose={handleClose}
     >
       <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
-        {GUESS_DISTRIBUTION_TEXT}
+        Reality Shows Watched - by Month
       </h4>
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
