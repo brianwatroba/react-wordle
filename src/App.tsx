@@ -10,6 +10,7 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { AboutModal } from './components/modals/AboutModal'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
+import { ResultModal } from './components/modals/ResultModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
   GAME_TITLE,
@@ -54,6 +55,7 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isResultModalOpen, setIsResultModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
   const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
@@ -147,7 +149,7 @@ function App() {
 
         setTimeout(() => {
           setSuccessAlert('')
-          setIsStatsModalOpen(true)
+          setIsResultModalOpen(true)
         }, ALERT_TIME_MS)
       }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
     }
@@ -280,6 +282,19 @@ function App() {
       <StatsModal
         isOpen={isStatsModalOpen}
         handleClose={() => setIsStatsModalOpen(false)}
+        guesses={guesses}
+        gameStats={stats}
+        isGameLost={isGameLost}
+        isGameWon={isGameWon}
+        handleShare={() => {
+          setSuccessAlert(GAME_COPIED_MESSAGE)
+          return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+        }}
+        isHardMode={isHardMode}
+      />
+      <ResultModal
+        isOpen={isResultModalOpen}
+        handleClose={() => setIsResultModalOpen(false)}
         guesses={guesses}
         gameStats={stats}
         isGameLost={isGameLost}
