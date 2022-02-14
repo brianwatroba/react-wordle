@@ -5,7 +5,19 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="%REACT_APP_GAME_DESCRIPTION%" />
+    <meta name="description" content="Elaine's Valentine's Day Wordle" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta property="og:url" content="https://valentines-wordle.vercel.app/" />
+    <meta property="og:title" content="Vordle" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Elaine's Valentine's Day Wordle" />
+    <!-- <meta
+      property="og:image"
+      content="https://thumbs-prod.si-cdn.com/y_DfZBivsfDMMmu0Q62Nc8TW-HY=/fit-in/1600x0/https://public-media.si-cdn.com/filer/40/e7/40e76a5f-ada9-45da-9dfb-e9824647380e/nov2015_d05_fourthmole-web-resize-v2.jpg"
+    /> -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -23,16 +35,22 @@
     -->
     <title>%REACT_APP_GAME_NAME%</title>
 
-    <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_GOOGLE_MEASUREMENT_ID != null) { %>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <% if (process.env.NODE_ENV === 'production' &&
+    process.env.REACT_APP_GOOGLE_MEASUREMENT_ID != null) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GOOGLE_MEASUREMENT_ID%"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-        gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%');
-      </script>
+      gtag('config', '%REACT_APP_GOOGLE_MEASUREMENT_ID%')
+    </script>
     <% } %>
   </head>
   <body>
