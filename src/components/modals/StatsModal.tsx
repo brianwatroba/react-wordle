@@ -46,7 +46,7 @@ export const StatsModal = ({
   }
   return (
     <BaseModal
-      title={STATISTICS_TITLE}
+      title={'STATISTICS_TITLE'}
       isOpen={isOpen}
       handleClose={handleClose}
     >
