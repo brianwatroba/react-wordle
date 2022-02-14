@@ -35,12 +35,13 @@ export const SettingsModal = ({
           handleFlag={handleDarkMode}
         />
         <SettingsToggle
-          settingName="Hard Mode"
+          settingName="Water Management"
           flag={isHardMode}
           handleFlag={handleHardMode}
         />
+
         <SettingsToggle
-          settingName="High Contrast Mode"
+          settingName='Use of "Chimpy"'
           flag={isHighContrastMode}
           handleFlag={handleHighContrastMode}
         />
